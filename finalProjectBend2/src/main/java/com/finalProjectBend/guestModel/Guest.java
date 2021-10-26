@@ -1,5 +1,6 @@
 package com.finalProjectBend.guestModel;
 
+//import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
@@ -9,9 +10,12 @@ import javax.persistence.Table;
 public class Guest {
 	
 	@Id
+	
 	private int ID;
-	private String FIRST_NAME;
-	private String LAST_NAME;
+//	@Column(name = "firstname")
+	private String firstname;
+//	@Column(name = "LAST_NAME")
+	private String LASTNAME;
 	private String TICKET;
 	
 	public Guest() {
@@ -21,8 +25,8 @@ public class Guest {
 	public Guest(int iD, String fIRST_NAME, String lAST_NAME, String tICKET) {
 		super();
 		this.ID = iD;
-		this.FIRST_NAME = fIRST_NAME;
-		this.LAST_NAME = lAST_NAME;
+		this.firstname = fIRST_NAME;
+		this.LASTNAME = lAST_NAME;
 		this.TICKET = tICKET;
 	}
 
@@ -35,19 +39,19 @@ public class Guest {
 	}
 
 	public String getFIRST_NAME() {
-		return FIRST_NAME;
+		return firstname;
 	}
 
 	public void setFIRST_NAME(String fIRST_NAME) {
-		FIRST_NAME = fIRST_NAME;
+		firstname = fIRST_NAME;
 	}
 
 	public String getLAST_NAME() {
-		return LAST_NAME;
+		return LASTNAME;
 	}
 
 	public void setLAST_NAME(String lAST_NAME) {
-		LAST_NAME = lAST_NAME;
+		LASTNAME = lAST_NAME;
 	}
 
 	public String getTICKET() {

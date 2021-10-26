@@ -46,17 +46,17 @@ public class GuestController {
 		return ResponseEntity.ok(g);
 	}
 	
-	@GetMapping("guests/{name}")
-	public List<Guest> getGuestByName(@PathVariable String name)
-	{
-		List <Guest> guests=guestRepo.findByName(name);
-		if(guests.isEmpty())
-		{
-			System.out.println(new ResourceNFexception("Guest" + name + "not found"));
-		}
-		
-		return guestRepo.findByName(name);
-	}
+//	@GetMapping("guests/{name}")
+//	public List<Guest> getGuestByName(@PathVariable String name)
+//	{
+//		List <Guest> guests=guestRepo.findByFirstName(name);
+//		if(guests.isEmpty())
+//		{
+//			System.out.println(new ResourceNFexception("Guest" + name + "not found"));
+//		}
+//		
+//		return guestRepo.findByFirstName(name);
+//	}
 	
 	
 		@PutMapping("/guest/{Id}")

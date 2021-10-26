@@ -8,7 +8,7 @@ import com.finalProjectBend.guestModel.Guest;
 
 
 @Repository
-public interface GuestRepository extends JpaRepository<Guest,Integer>{
-
-	List<Guest> findByName(String name);
+public interface GuestRepository extends JpaRepository<Guest, Integer>{
+	
+	List<Guest> findByFirstname(String fIRST_NAME);
 }
