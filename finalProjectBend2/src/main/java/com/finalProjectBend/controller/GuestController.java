@@ -46,7 +46,7 @@ public class GuestController {
 		return ResponseEntity.ok(g);
 	}
 	
-	@GetMapping("guests/{name}")
+	@GetMapping("guest/{name}")
 	public List<Guest> getGuestByName(@PathVariable String name)
 	{
 		List <Guest> guests=guestRepo.findByFirstname(name);
