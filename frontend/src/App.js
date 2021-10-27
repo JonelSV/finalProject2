@@ -1,24 +1,40 @@
-import logo from './logo.svg';
-import './App.css';
+import ListGuests from './components/ListGuests';
+import AddGuest from './components/AddGuest';
+import UpdateGuest from './components/UpdateGuest';
+import DeleteGuest from './components/DeleteGuest';
+import ViewGuest from './components/ViewGuest';
+import './App.css'
+
+import {BrowserRouter as Router,Route, Switch} from 'react-router-dom';
+import Header from './components/Header';
+import Footer from './components/Footer';
+import Navbar from './components/pages/Navbar';
+import Priority from './components/pages/Priority';
+import Contacts from './components/pages/Contacts';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    return (
+        <div>
+          <Router>
+          <Navbar />
+          <Header />
+            <div className="container">
+              <Switch>
+                  <Route path="/" exact component={ListGuests}></Route>
+                  <Route path="/guests" component={ListGuests}></Route>
+                  <Route path="/add-guest" component={AddGuest}></Route>
+                  <Route path="/update-guest/:id" component={UpdateGuest}></Route> 
+                  <Route path="/delete-guest/:id" component={DeleteGuest}></Route> 
+                  <Route path="/view-guest/:id" component={ViewGuest}></Route>
+                  <Route path="/PriorityX" component={Priority}></Route>
+                  <Route path="/Contacts" component={Contacts}></Route>
+                  
+              </Switch>
+            </div>
+            <Footer />
+            
+          </Router>
+        </div>
   );
 }
 
