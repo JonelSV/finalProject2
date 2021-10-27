@@ -2,6 +2,8 @@ package com.finalProjectBend.guestModel;
 
 //import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
@@ -10,12 +12,12 @@ import javax.persistence.Table;
 public class Guest {
 	
 	@Id
-	
+//	@GeneratedValue(strategy = GenerationType.AUTO)
 	private int ID;
 //	@Column(name = "firstname")
 	private String firstname;
 //	@Column(name = "LAST_NAME")
-	private String LASTNAME;
+	private String lastname;
 	private String TICKET;
 	
 	public Guest() {
@@ -26,7 +28,7 @@ public class Guest {
 		super();
 		this.ID = iD;
 		this.firstname = fIRST_NAME;
-		this.LASTNAME = lAST_NAME;
+		this.lastname = lAST_NAME;
 		this.TICKET = tICKET;
 	}
 
@@ -38,20 +40,20 @@ public class Guest {
 		ID = iD;
 	}
 
-	public String getFIRST_NAME() {
+	public String getfirstname() {
 		return firstname;
 	}
 
-	public void setFIRST_NAME(String fIRST_NAME) {
+	public void setfirstname(String fIRST_NAME) {
 		firstname = fIRST_NAME;
 	}
 
-	public String getLAST_NAME() {
-		return LASTNAME;
+	public String getlastname() {
+		return lastname;
 	}
 
-	public void setLAST_NAME(String lAST_NAME) {
-		LASTNAME = lAST_NAME;
+	public void setlastname(String lAST_NAME) {
+		lastname = lAST_NAME;
 	}
 
 	public String getTICKET() {

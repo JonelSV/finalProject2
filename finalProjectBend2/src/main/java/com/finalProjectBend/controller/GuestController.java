@@ -46,25 +46,25 @@ public class GuestController {
 		return ResponseEntity.ok(g);
 	}
 	
-//	@GetMapping("guests/{name}")
-//	public List<Guest> getGuestByName(@PathVariable String name)
-//	{
-//		List <Guest> guests=guestRepo.findByFirstName(name);
-//		if(guests.isEmpty())
-//		{
-//			System.out.println(new ResourceNFexception("Guest" + name + "not found"));
-//		}
-//		
-//		return guestRepo.findByFirstName(name);
-//	}
+	@GetMapping("guests/{name}")
+	public List<Guest> getGuestByName(@PathVariable String name)
+	{
+		List <Guest> guests=guestRepo.findByFirstname(name);
+		if(guests.isEmpty())
+		{
+			System.out.println(new ResourceNFexception("Guest" + name + "not found"));
+		}
+		
+		return guestRepo.findByFirstname(name);
+	}
 	
 	
 		@PutMapping("/guest/{Id}")
 		public ResponseEntity <Guest> updateGuest(@PathVariable int Id, @RequestBody Guest guest)
 		{
 			Guest g= guestRepo.findById(Id).orElseThrow(() ->  new ResourceNFexception("Guest not found"));
-		    g.setFIRST_NAME(guest.getFIRST_NAME());
-//		    g.setCLASS(guest.getClass());
+		    g.setfirstname(guest.getfirstname());
+		    g.setlastname(guest.getlastname());
 		    g.setTICKET(guest.getTICKET());
 		    Guest updatedGuest=guestRepo.save(g);
 		    return ResponseEntity.ok(updatedGuest);
@@ -73,7 +73,7 @@ public class GuestController {
 
 		
 		@DeleteMapping("/guest/{Id}")
-		public String deleteStudent(@PathVariable int Id)
+		public String deleteGuest(@PathVariable int Id)
 		{
 			guestRepo.findById(Id).orElseThrow(() ->  new ResourceNFexception("Student not found"));
 		    guestRepo.deleteById(Id);
