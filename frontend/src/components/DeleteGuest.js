@@ -8,8 +8,8 @@ class DeleteGuest extends Component {
         
              this.state={
                  id: this.props.match.params.id,
-                 name:'',
-                 lastName:'',
+                 firstname:'',
+                 lastname:'',
                  ticket:''
              }
      
@@ -22,8 +22,8 @@ class DeleteGuest extends Component {
      {
         GuestService.getGuestById(this.state.id).then((res) =>{
           let guest = res.data;
-          this.setState({name:guest.name,
-                lastName:guest.lastName,
+          this.setState({firstname:guest.firstname,
+                lastname:guest.lastname,
                   ticket:guest.ticket,
                 });
         });
@@ -37,8 +37,8 @@ class DeleteGuest extends Component {
         e.preventDefault();
         let guest={
            id: this.state.id,
-           name: this.state.name,
-           lastName: this.state.lastName,
+           firstname: this.state.firstname,
+           lastname: this.state.lastname,
            ticket: this.state.ticket
         };
 
@@ -72,12 +72,12 @@ class DeleteGuest extends Component {
                                    <div className="form-group">
                                       <label>Guest Name: </label>
                                       <input placeholder="Name" readOnly= "true" name="name" className="form-control"
-                                         value={this.state.name} onChange={this.nameHandler} />
+                                         value={this.state.firstname} onChange={this.nameHandler} />
                                    </div>   
                                    <div className="form-group">
                                       <label>Guest LastName: </label>
                                       <input placeholder="Name" readOnly= "true" name="name" className="form-control"
-                                         value={this.state.lastName} onChange={this.lastNameHandler} />
+                                         value={this.state.lastname} onChange={this.lastNameHandler} />
                                    </div>   
                                    <div className="form-group">
                                       <label>Guest Ticket: </label>

@@ -17,7 +17,7 @@ class GuestService{
 
     getGuestById(id){
         console.log(id, typeof id)
-        return axios.get(GAPI_BASE_URL + "/guest/"+id);
+        return axios.get(GAPI_BASE_URL + "/guests/"+id);
     }
 
     updateGuest(guest,id){

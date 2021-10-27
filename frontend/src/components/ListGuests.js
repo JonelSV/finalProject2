@@ -105,7 +105,7 @@ class ListGuests extends Component {
                 </tbody>
               </table>
             </div>
-            {/* <section>
+            <section>
               <video
                 autoPlay
                 loop
@@ -121,7 +121,7 @@ class ListGuests extends Component {
               >
                 <source src={Chain} type='video/mp4' />
               </video>
-            </section> */}
+            </section>
           </div>
         );
         

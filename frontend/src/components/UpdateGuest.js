@@ -26,6 +26,7 @@ class UpdateGuest extends Component {
         GuestService.getGuestById(this.state.id).then((res) =>{
           let guest = res.data;
           this.setState({firstname:guest.firstname,
+                lastname:guest.lastname,
                   ticket:guest.ticket
                 });
         });
