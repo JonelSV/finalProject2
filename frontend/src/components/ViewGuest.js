@@ -5,20 +5,20 @@ class ViewGuest extends Component {
     constructor(props)
     {
         super(props)
-        
              this.state={
                  id: this.props.match.params.id,
-                 guest:{}
-
+                 guest:{
+                     id: this.props.match.params.id,
+                     
+                 }
              }
-     
-        
         
     }
 
      componentDidMount()
      {
         GuestService.getGuestById(this.state.id).then((res) =>{
+            console.log(res.data)
             this.setState({guest:res.data})
          });
      }
@@ -34,16 +34,17 @@ class ViewGuest extends Component {
                           <div className="card-body">
                               <form>  
                                   <div className="form-group">
+
                                     <label>Guest ID: </label>
                                     <input placeholder={this.state.guest.id} readOnly={true} name="id" className="form-control" />
                                    </div>   
                                    <div className="form-group">
                                       <label>Guest Name: </label>
-                                      <input placeholder={this.state.guest.name} readOnly={true} name="name" className="form-control" />
+                                      <input placeholder={this.state.guest.firstname} readOnly={true} name="name" className="form-control" />
                                    </div>   
                                    <div className="form-group">
                                       <label>Guest LastName: </label>
-                                      <input placeholder={this.state.guest.lastName} readOnly={true} name="lastname" className="form-control" />
+                                      <input placeholder={this.state.guest.lastname} readOnly={true} name="lastname" className="form-control" />
                                    </div>   
                                    <div className="form-group">
                                       <label>Guest Ticket: </label>

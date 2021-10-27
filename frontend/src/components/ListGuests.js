@@ -55,7 +55,7 @@ class ListGuests extends Component {
             <h2 className='text-center'>Guest List</h2>
             <div>
               <button className='btn btn-primary' onClick={this.addGuest}>
-                {' '}
+                
                 Add Guest
               </button>
             </div>
@@ -70,15 +70,15 @@ class ListGuests extends Component {
                     <th>Guest Name</th>
                     <th>Guest LastName</th>
                     <th>Guest Ticket</th>
-                    <th>Actions</th>
+                    <th>Options</th>
                   </tr>
                 </thead>
                 <tbody>
                   {this.state.guests.map((guest) => (
                     <tr key={guest.id}>
                       <td>{guest.id}</td>
-                      <td>{guest.name}</td>
-                      <td>{guest.lastName}</td>
+                      <td>{guest.firstname}</td>
+                      <td>{guest.lastname}</td>
                       <td>{guest.ticket}</td>
                       <td>
                         <button
@@ -105,7 +105,7 @@ class ListGuests extends Component {
                 </tbody>
               </table>
             </div>
-            <section>
+            {/* <section>
               <video
                 autoPlay
                 loop
@@ -121,7 +121,7 @@ class ListGuests extends Component {
               >
                 <source src={Chain} type='video/mp4' />
               </video>
-            </section>
+            </section> */}
           </div>
         );
         

@@ -6,9 +6,9 @@ class AddGuest extends Component {
     {
         super(props)
         this.state={
-           id: '',
-           name:'',
-           lastName: '',
+           id: null,
+           firstname:'',
+           lastname: '',
            ticket:''
         }
       
@@ -28,11 +28,11 @@ class AddGuest extends Component {
 
     nameHandler=(event) => {
         this.setState({
-           name: event.target.value});
+           firstname: event.target.value});
     }
     lastNameHandler=(event) => {
         this.setState({
-           lastName: event.target.value});
+           lastname: event.target.value});
     }
 
      
@@ -45,12 +45,13 @@ class AddGuest extends Component {
         e.preventDefault();
         let guest={
            id: this.state.id,
-           name: this.state.name,
-           lastName: this.state.lastName,
+           firstname: this.state.firstname,
+           lastname: this.state.lastname,
            ticket: this.state.ticket
         };
-        console.log(guest);
+        // console.log(guest);
         GuestService.createGuest(guest).then(res =>{
+            console.log(res.data)
                 this.props.history.push('/guest');  
             }).catch(error=>{
                 console.log("record not saved.");
@@ -82,12 +83,12 @@ class AddGuest extends Component {
                                    <div className="form-group">
                                       <label>First Name: </label>
                                       <input placeholder="Name" name="name" className="form-control"
-                                         value={this.state.name} onChange={this.nameHandler} />
+                                         value={this.state.firstname} onChange={this.nameHandler} />
                                    </div>   
                                    <div className="form-group">
                                       <label>Last Name: </label>
                                       <input placeholder="Name" name="name" className="form-control"
-                                         value={this.state.lastName} onChange={this.lastNameHandler} />
+                                         value={this.state.lastname} onChange={this.lastNameHandler} />
                                    </div>   
 
 

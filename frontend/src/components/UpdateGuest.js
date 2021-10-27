@@ -8,8 +8,8 @@ class UpdateGuest extends Component {
         
              this.state={
                  id: this.props.match.params.id,
-                 name:'',
-                 lastName:'',
+                 firstname:'',
+                 lastname:'',
                  ticket:''
              }
      
@@ -25,7 +25,7 @@ class UpdateGuest extends Component {
      {
         GuestService.getGuestById(this.state.id).then((res) =>{
           let guest = res.data;
-          this.setState({name:guest.name,
+          this.setState({firstname:guest.firstname,
                   ticket:guest.ticket
                 });
         });
@@ -39,11 +39,11 @@ class UpdateGuest extends Component {
 
     nameHandler=(event) => {
         this.setState({
-           name: event.target.value});
+           firstname: event.target.value});
     }
     lastNameHandler=(event) => {
         this.setState({
-           lastName: event.target.value});
+           lastname: event.target.value});
     }
 
    ticketHandler=(event) => {
@@ -55,12 +55,13 @@ class UpdateGuest extends Component {
         e.preventDefault();
         let guest={
            id: this.state.id,
-           name: this.state.name,
-           lastName: this.state.lastName,
+           firstname: this.state.firstname,
+           lastname: this.state.lastname,
            ticket: this.state.ticket
         };
         
         GuestService.updateGuest(guest,this.state.id).then((res) => {
+            console.log(res.data)
                 this.props.history.push('/guests');
         });
       
@@ -88,12 +89,12 @@ class UpdateGuest extends Component {
                                    <div className="form-group">
                                       <label>Guest Name: </label>
                                       <input placeholder="Name" name="name" className="form-control"
-                                         value={this.state.name} onChange={this.nameHandler} />
+                                         value={this.state.firstname} onChange={this.nameHandler} />
                                    </div>   
                                    <div className="form-group">
                                       <label>Guest LastName: </label>
                                       <input placeholder="Name" name="name" className="form-control"
-                                         value={this.state.lastName} onChange={this.lastNameHandler} />
+                                         value={this.state.lastname} onChange={this.lastNameHandler} />
                                    </div>   
                                    <div className="form-group">
                                       <label>Guest Ticket: </label>

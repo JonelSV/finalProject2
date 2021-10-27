@@ -11,8 +11,12 @@ class GuestService{
     createGuest(guest){
         return axios.post(GAPI_BASE_URL + "/addguest",guest);
     }
+    viewGuest(id){
+        return axios.get(GAPI_BASE_URL + "/view-guest"+id);
+    }
 
     getGuestById(id){
+        console.log(id, typeof id)
         return axios.get(GAPI_BASE_URL + "/guest/"+id);
     }
 

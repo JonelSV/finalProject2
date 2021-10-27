@@ -1,5 +1,7 @@
 import React from 'react'
 import Contact from '../assets/Contact.mp4'
+import axios from 'axios'
+
 const Contacts = () => {
     return (
         <div>
@@ -20,6 +22,13 @@ const Contacts = () => {
                 <source src={Contact} type='video/mp4' />
               </video>
             </section>
+
+            <iframe src="https://www.dhs.gov/ntas/" name="National Terrorism Advisory System" 
+            title="National Terrorism Advisory System" width="270" height="280" scrolling="no" 
+            frameborder="0" seamless border="0"></iframe>
+
+                
+
         </div>
     )
 }
