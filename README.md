@@ -3,6 +3,8 @@
  The main function of the application is to take record of the Guest Attendance and the particular ticket types they are holding. Most international private events of this particular kind
  (private auctions, charity, private gatherings) usually have specific clientels and this app is meant to cater for such need.
 
+![](files/front1.png)
+
 ## Frontend
 
 The technologies used in for the frontend are HTML5, CSS3, Javascript, React, React-router, axios, mapbox, and the Bootstrap library.
