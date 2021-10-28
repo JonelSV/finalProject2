@@ -3,18 +3,19 @@
  The main function of the application is to take record of the Guest Attendance and the particular ticket types they are holding. Most international private events of this particular kind
  (private auctions, charity, private gatherings) usually have specific clientels and this app is meant to cater for such need.
 
-# Frontend
+## Frontend
 
 The technologies used in for the frontend are HTML5, CSS3, Javascript, React, React-router, axios, mapbox, and the Bootstrap library.
 
-# Backend
+## Backend
 
 The technolgies used for the backend are Java and Spring Boot.
 
-# Future plans for the project.
+## Future plans for the project.
 
 I intend to add more features for the project like Geo-tagging guests since this is an international event/guests management tool.
 In addition, having data analysis based on geolocation data 
 (This is a work in progress and will continue to be updated until fully working).
 
-Author
+Author:
+Jonel San Vicente
