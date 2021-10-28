@@ -11,8 +11,8 @@ const Priority = () => {
           <video autoPlay loop muted
             style={{
                 position: 'absolute',
-                width: '140%',
-                height: '190%',
+                width: '160%',
+                height: '200%',
                 objectFit: 'cover',
                 transform: 'translate(-40%, -40%)',
                 zIndex: '-1'
@@ -77,8 +77,8 @@ const Priority = () => {
           <video autoPlay loop muted
             style={{
                 position: 'absolute',
-                width: '140%',
-                height: '380%',
+                width: '160%',
+                height: '600%',
                 objectFit: 'cover',
                 transform: 'translate(-40%, -20%)',
                 zIndex: '-1'
