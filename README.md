@@ -1,4 +1,4 @@
-# finalProject2
+# Capstone Project (PerScholas)
  This is my Capstone Project for Per Scholas. The application is a Guest List Management Tool that can be used by event organizers catering to special special international events. 
  The main function of the application is to take record of the Guest Attendance and the particular ticket types they are holding. Most international private events of this particular kind
  (private auctions, charity, private gatherings) usually have specific clientels and this app is meant to cater for such need.
