@@ -11,6 +11,8 @@ The technologies used in for the frontend are HTML5, CSS3, Javascript, React, Re
 
 The technolgies used for the backend are Java and Spring Boot.
 
+## Database
+MySQL
 ## Future plans for the project.
 
 I intend to add more features for the project like Geo-tagging guests since this is an international event/guests management tool.
