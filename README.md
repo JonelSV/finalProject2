@@ -3,7 +3,10 @@
  The main function of the application is to take record of the Guest Attendance and the particular ticket types they are holding. Most international private events of this particular kind
  (private auctions, charity, private gatherings) usually have specific clientels and this app is meant to cater for such need.
 
-![](files/front1.png)
+![](frontend/src/files/front1.png)
+
+### Geo-Tagging Guests
+![](frontend/src/files/front3.png)
 
 ## Frontend
 
@@ -20,6 +23,8 @@ MySQL
 I intend to add more features for the project like Geo-tagging guests since this is an international event/guests management tool.
 In addition, having data analysis implemented based on geolocation data is something that I will be working on.
 (This is a work in progress and will continue to be updated until fully working).
+
+![](frontend/src/files/front2.png)
 
 Author:
 Jonel San Vicente
