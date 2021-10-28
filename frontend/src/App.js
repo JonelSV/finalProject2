@@ -8,15 +8,16 @@ import './App.css'
 import {BrowserRouter as Router,Route, Switch} from 'react-router-dom';
 import Header from './components/Header';
 import Footer from './components/Footer';
-import Navbar from './components/pages/Navbar';
+import NavbarZ from './components/pages/NavbarZ';
 import Priority from './components/pages/Priority';
+import GeoCheck from './components/pages/GeoCheck'
 import Contacts from './components/pages/Contacts';
 
 function App() {
     return (
         <div>
           <Router>
-          <Navbar />
+          <NavbarZ />
           <Header />
             <div className="container">
               <Switch>
@@ -27,6 +28,7 @@ function App() {
                   <Route path="/delete-guest/:id" component={DeleteGuest}></Route> 
                   <Route path="/view-guest/:id" component={ViewGuest}></Route>
                   <Route path="/PriorityX" component={Priority}></Route>
+                  <Route path="/GeoCheck" component={GeoCheck}></Route>
                   <Route path="/Contacts" component={Contacts}></Route>
                   
               </Switch>
