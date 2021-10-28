@@ -14,7 +14,7 @@ The technolgies used for the backend are Java and Spring Boot.
 ## Future plans for the project.
 
 I intend to add more features for the project like Geo-tagging guests since this is an international event/guests management tool.
-In addition, having data analysis based on geolocation data 
+In addition, having data analysis implemented based on geolocation data is something that I will be working on.
 (This is a work in progress and will continue to be updated until fully working).
 
 Author:
